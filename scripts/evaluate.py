@@ -32,6 +32,7 @@ def mrr_score(y_true, y_score):
     rr_score = y_true / (np.arange(len(y_true)) + 1)
     return np.sum(rr_score) / np.sum(y_true)
 
+
 def parse_line(l):
     impid, ranks = l.strip('\n').split()
     ranks = json.loads(ranks)
